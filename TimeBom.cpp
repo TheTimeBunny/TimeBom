@@ -3,10 +3,15 @@
 
 #include "TimeBom.h"
 
-using namespace std;
+class sceneprep {
+public:
+	int finddir() {
+		std::cout << ""; //placeholder
+	}
+};
 
 int main()
 {
-	cout << "Hello CMake." << endl;
+	std::cout << "Hello CMake." << std::endl;
 	return 0;
 }
