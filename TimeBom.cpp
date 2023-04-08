@@ -39,6 +39,15 @@ public:
 		std::cout << "Placeholder" << std::endl;
 		//this controls AI, as well as frame based events
 	}
+	void biai(){
+		std::cout << ""; //placeholde
+	}
+	class ai{
+	public:
+		void tick() {
+			std::cout << ""; //hmm.. i wonder what this is. Placeholder, maybe?
+		};
+	};
 };
 
 void loop(int offput, int run) {
@@ -47,15 +56,13 @@ void loop(int offput, int run) {
 	int loop = 0;
 	while (c == 1) {
 		call.tick();
-		_sleep(offput);
+		std::this_thread::sleep_for(std::chrono::milliseconds(1));
 		loop++; 
 		if (loop > 59) {
 			c = 2; //stops code
 		}
 	}
 }
-
-
 
 int pixf(int sx, int sy) {
 	int r = sx * sy;
