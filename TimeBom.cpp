@@ -1,4 +1,4 @@
-﻿// TimeBom.cpp : Defines the entry point for the application.
+// TimeBom.cpp : Defines the entry point for the application.
 //
 
 #include "TimeBom.h"
@@ -39,10 +39,10 @@ public:
 		std::cout << "Placeholder" << std::endl;
 		//this controls AI, as well as frame based events
 	}
-	void biai(){
+	void biai() {
 		std::cout << ""; //placeholde
 	}
-	class ai{
+	class ai {
 	public:
 		void tick() {
 			std::cout << ""; //hmm.. i wonder what this is. Placeholder, maybe?
@@ -50,15 +50,16 @@ public:
 	};
 };
 
-void loop(int offput, int run) {
+void loop(int offput, int run, int fps) {
 	Logic call;
 	int c = run;
 	int loop = 0;
+	r = 1 / fps;
 	while (c == 1) {
 		call.tick();
-		std::this_thread::sleep_for(std::chrono::milliseconds(1));
-		loop++; 
-		if (loop > 59) {
+		std::this_thread::sleep_for(std::chrono::milliseconds(r));
+		loop++;
+		if (loop > (fps - 1) {
 			c = 2; //stops code
 		}
 	}
@@ -71,10 +72,11 @@ int pixf(int sx, int sy) {
 
 int main()
 {
-	std::cout << "Hello CList!" << std::endl; 
+	std::cout << "Hello CList!" << std::endl;
 	int x = 1920; //temp values, v
 	int y = 1080; //temp values, should read from setting file
 	int size = pixf(x, y);
-	loop(1, 1); //should be fast enough.
+	int fps = 60;
+	loop(1, 1, fps); //should be fast enough.
 	return 0;
 };
