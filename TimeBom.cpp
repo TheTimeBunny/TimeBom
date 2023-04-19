@@ -3,14 +3,14 @@
 
 #include "TimeBom.h"
 
-class sceneprep {
+class TB_ScenePreparation {
 public:
-	int finddir() {
-		std::cout << ""; //placeholder
+	int find_dir() {
+		std::cout << ""; // placeholder
 	}
 };
 
-class Save {
+class TB_Save {
 public:
 	void save() {
 		std::cout << ""; //Placeholder
@@ -21,19 +21,19 @@ public:
 	}
 };
 
-class Render {
+class TB_Render {
 public:
-	int decidel() {
-		//decides where and how to draw, starts with poly's, than draws finer detail
-		std::cout << ""; //placeholder.. surprise!
+	int optimize_scene() {
+		// Decides where and how to draw, starts with poly's, then draws finer detail
+		std::cout << ""; // Placeholder... surprise!
 	}
 public:
-	int effects(std::string ef) { //Anti-alaising, RTX, etx;
+	int draw_effects(std::string ef) { //Anti-alaising, RTX, etx;
 		std::cout << "";
 	}
 };
 
-class Logic {
+class TB_Logic {
 public:
 	void tick() {
 		std::cout << "Placeholder" << std::endl;
@@ -42,7 +42,7 @@ public:
 	void biai() {
 		std::cout << ""; //placeholde
 	}
-	class ai {
+	class TB_AI {
 	public:
 		void tick() {
 			std::cout << ""; //hmm.. i wonder what this is. Placeholder, maybe?
@@ -50,14 +50,16 @@ public:
 	};
 };
 
-void loop(int offput, int run, int fps) {
+void loop(int offset /* Not sure about this */, int run, int fps) {
 	Logic call;
+	// not sure what this is
 	int c = run;
 	int loop = 0;
-	r = 1 / fps;
+	// I'm assuming this is what you meant???
+	float rate = 1 / fps;
 	while (c == 1) {
 		call.tick();
-		std::this_thread::sleep_for(std::chrono::milliseconds(r));
+		std::this_thread::sleep_for(std::chrono::milliseconds(rate));
 		loop++;
 		if (loop > (fps - 1) {
 			c = 2; //stops code
@@ -65,11 +67,15 @@ void loop(int offput, int run, int fps) {
 	}
 }
 
+// What does this do???
+// *touches*
+// *BOOM*
 int pixf(int sx, int sy) {
 	int r = sx * sy;
 	return r;
 }
 
+// main function lol
 int main()
 {
 	std::cout << "Hello CList!" << std::endl;
