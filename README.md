@@ -3,7 +3,7 @@
 
 GOALS
 
-TimeBom aims to be a versatile engine, be it to run on someones Mac when they have some downtime, or in some of the biggestt games ever.
+TimeBom aims to be a versatile engine, be it to run on someones Mac when they have some downtime, or in some of the biggest eSports games ever.
 
 To complete this goal, it is set to support multiple devices, the majority of the desktop gaming market, from day one.
 
