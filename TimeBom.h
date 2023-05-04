@@ -4,5 +4,11 @@
 #pragma once
 
 #include <iostream>
+#include <fstream>
+#include <math.h>
+#include <time.h>
+#include <thread>
+#include<windows.h>
 
 // TODO: Reference additional headers your program requires here.
+//Note, may need to import some libs, which will include their own headers
