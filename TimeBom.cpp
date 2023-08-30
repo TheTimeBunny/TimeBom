@@ -6,7 +6,7 @@
 void loop(int offset, int run, int fps) {
 	int c = run;
 	int loop = 0;
-	float rate = 1 / fps;
+	int rate = 1 / fps;
 	while (c == 1) {
 		Sleep(rate);
 		loop++;
